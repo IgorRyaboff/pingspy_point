@@ -2,7 +2,7 @@ const ping = require('ping').promise;
 const axios = require('axios').default;
 
 module.exports = async (proto, url) => {
-    console.log('doing ', proto, url);
+    //console.log('doing ', proto, url);
     switch (proto) {
         case 'ping':
             for (let i = 0; i < 3; i++) {
