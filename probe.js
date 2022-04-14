@@ -4,7 +4,10 @@ const axios = require('axios').default;
 module.exports = async (proto, url) => {
     switch (proto) {
         case 'ping':
-            return (await ping.probe(url, { timeout: 3 })).alive;
+            for (let i = 0; i < 3; i++) {
+                if ((await ping.probe(url, { timeout: 3 })).alive) return true;
+            }
+            return false;
         case 'http':
             try {
                 let resp = await axios({ url: 'http://' + url });
