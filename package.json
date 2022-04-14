@@ -1,0 +1,24 @@
+{
+    "name": "pingspy_point",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/IgorRyaboff/pingspy_point.git"
+    },
+    "author": "Igor Ryabov",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/IgorRyaboff/pingspy_point/issues"
+    },
+    "homepage": "https://github.com/IgorRyaboff/pingspy_point#readme",
+    "dependencies": {
+        "axios": "^0.26.1",
+        "node-fetch": "^3.2.3",
+        "ping": "^0.4.1"
+    }
+}
