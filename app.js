@@ -60,7 +60,7 @@ async function cycle() {
         console.log(`New/updated monitor ${i}, href: ${ans.new[i]}`);
         monitors[i] = ans.new[i];
     };
-    //console.log('Cycle successfully complete');
+    console.log('Cycle sent at ' + new Date);
     scheduleCycle();
 }
 
