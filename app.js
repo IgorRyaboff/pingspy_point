@@ -10,7 +10,7 @@ async function cycle() {
     let promises = [];
     for (let i in monitors) {
         let proto = monitors[i].split(':')[0];
-        let url = monitors[i].split(':').slice(1);
+        let url = monitors[i].split(':').slice(1).join(':');
         promises.push(probe(proto, url).then(r => {
             requestData[i] = {
                 status: r ? 'up' : 'down',
@@ -65,7 +65,7 @@ async function cycle() {
 }
 
 function scheduleCycle() {
-    setTimeout(() => cycle(), 1000 * 60 * 60);
+    setTimeout(() => cycle(), 1000 * 3);
 }
 
 cycle();
