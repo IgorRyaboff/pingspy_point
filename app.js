@@ -66,7 +66,7 @@ async function cycle() {
 
 function scheduleCycle() {
     console.log('scheduled');
-    setTimeout(() => cycle(), 1000 * 60 * 60);
+    setTimeout(() => cycle(), 1000 * 60);
 }
 
 cycle();
