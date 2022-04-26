@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingSpy point info</title>
+</head>
+<body>
+    <div>Last announce to the server: <%=lastAnnounce%></div>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>HREF</td>
+            <td>Status</td>
+        </tr>
+    <% for (let i in monitors) {%>
+        <tr>
+            <td><%= i %></td>
+            <td><%= monitors[i].href %></td>
+            <td><%= monitors[i].status == 'up' ? '🟢' : '🔴' %> <%= monitors[i].status.toUpperCase() %></td>
+        </tr>
+    <%}%>
+    </table>
+
+    <script>
+        setInterval(() => location.reload(), 3000);
+    </script>
+</body>
+</html>
