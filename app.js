@@ -45,7 +45,8 @@ async function announce() {
             responseType: 'json',
             data: JSON.stringify({
                 token: config.token,
-                data: monitors
+                data: monitors,
+                v: require('./package.json').version
             }),
             headers: { 'Content-Type': 'application/json' }
         });
